@@ -12,6 +12,20 @@ For example, [Netlify Forms](https://docs.netlify.com/forms/setup/) do their mag
 This has [required some adjustments](https://docs.netlify.com/forms/setup/#javascript-forms) for the age of SPA and SSR. 
 With modern Next.js versions, no page is truly static: as a developer, you can revalidate any page. However, you can still use our forms.
 
+import { Image } from "@unpic/react/nextjs";
+import logo from "../public/796435.jpg";
+
+// You can use both local images, and ones from image CDNs
+<Image src={logo} alt="Logo" layout="constrained" />
+
+<Image
+  src="https://cdn.shopify.com/static/sample-images/garnished.jpeg"
+  layout="constrained"
+  width={1000}
+  height={800}
+  alt="Shopify product"
+/>
+
 Below is a simple form using \`fetch\` to submit its data to Netlify rather than using full-page navigation. To be detected, form tags must be hosted in static files -
 and \`public/__forms.html\` exists just for this purpose.
 

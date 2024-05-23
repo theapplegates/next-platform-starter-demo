@@ -12,7 +12,7 @@ const sampleImage = '/images/corgi.jpg';
 
 const ctx = getNetlifyContext();
 const forceWebP = ctx === 'dev';
-const sampleImageSrcSet = [640, 1280, 2048]
+const sampleImageSrcSet = [80, 200, 320, 570, 880, 1024, 1248]
     .map((size) => {
         return `/.netlify/images?url=${sampleImage}&w=${size}${forceWebP ? '&fm=webp' : ''} ${size}w`;
     })
@@ -74,7 +74,7 @@ export default function Page() {
                         priority
                         fill={true}
                         style={{ objectFit: 'contain' }}
-                        sizes="(max-width: 1024px) 100vw, 1024px"
+                        sizes="(max-width: 1248w) 100vw, 1248px"
                         alt="Corgi"
                     />
                 </div>
