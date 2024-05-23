@@ -1,5 +1,8 @@
 import { FeedbackForm } from 'components/feedback-form';
 import { Markdown } from '../../components/markdown';
+import { Image } from "@unpic/react/nextjs";
+import logo from "../public/796435.jpg";
+
 
 export const metadata = {
     title: 'Classics'
@@ -12,8 +15,6 @@ For example, [Netlify Forms](https://docs.netlify.com/forms/setup/) do their mag
 This has [required some adjustments](https://docs.netlify.com/forms/setup/#javascript-forms) for the age of SPA and SSR. 
 With modern Next.js versions, no page is truly static: as a developer, you can revalidate any page. However, you can still use our forms.
 
-import { Image } from "@unpic/react/nextjs";
-import logo from "../public/796435.jpg";
 
 // You can use both local images, and ones from image CDNs
 <Image src={logo} alt="Logo" layout="constrained" />
